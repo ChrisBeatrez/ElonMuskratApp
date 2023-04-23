@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="HardcodedText">
+
+    <item
+        android:id="@+id/nav_calculator"
+        android:title="Calculator" />
+    <item
+        android:id="@+id/nav_burn"
+        android:title="Burn" />
+    <item
+        android:id="@+id/nav_about"
+        android:title="About" />
+
+    <item
+        android:id="@+id/nav_socials"
+        android:title="$BRL Social Links" />
+    <item
+        android:id="@+id/nav_donate"
+        android:title="Donate" />
+
+</menu>

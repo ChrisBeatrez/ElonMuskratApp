@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">BRL Stake Calculator</string>
+    <!-- to toggle the open close button of the navigation drawer -->
+    <string name="nav_open">Open</string>
+    <string name="nav_close">Close</string>
+    <string
+        name="Telegram"><a href="https://t.me/BullRunLife">Telegram</a></string>
+    <string
+        name="Website"><a href="https://bullrun.life/">Website</a></string>
+    <string
+        name="Youtube"><a href="https://www.youtube.com/@SteveBullRun">Youtube</a></string>
+    <string
+        name="Twitter"><a href="https://twitter.com/BullRunLife">Twitter</a></string>
+    <string
+        name="Dextools"><a href="https://www.dextools.io/app/en/ether/pair-explorer/0xf0e66ec47608b99c6378e28fe395590d989b283e">Dextools</a></string>
+</resources>
