@@ -32,13 +32,23 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/background" />
 
+            <VideoView
+                android:id="@+id/video_view"
+                android:layout_width="250dp"
+                android:layout_height="250dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.041" />
+
             <TextView
                 android:id="@+id/realBRLTotalSupply"
                 android:layout_width="133dp"
                 android:layout_height="31dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="BRL Total Supply:"
+                android:text="Total Staked BRL:"
                 android:textAlignment="center"
                 android:textColor="#FEFEFE"
                 app:layout_constraintBottom_toBottomOf="parent"
@@ -48,18 +58,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.977" />
 
-
-            <ImageView
-                android:id="@+id/imageView6"
-                android:layout_width="274dp"
-                android:layout_height="223dp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.496"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="@+id/Background"
-                app:layout_constraintVertical_bias="0.029"
-                app:srcCompat="@drawable/logo_top_middle" />
 
             <TextView
                 android:id="@+id/About"
@@ -162,7 +160,7 @@
                 android:id="@+id/submit"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:backgroundTint="#00B234"
+                android:backgroundTint="#8D6A1C"
                 android:text="Calculate"
                 android:textColor="#FEF2E1"
                 android:textStyle="bold"

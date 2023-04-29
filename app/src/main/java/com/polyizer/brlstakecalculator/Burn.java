@@ -10,12 +10,15 @@ import android.content.ClipboardManager;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -74,7 +77,28 @@ public class Burn extends AppCompatActivity implements NavigationView.OnNavigati
 
         burntsofaroutput = (TextView) findViewById(R.id.burnsofaroutput);
         burntpercentoutput = (TextView) findViewById(R.id.burntpercentoutput);
+        VideoView vv = findViewById(R.id.video_view);
 
+        vv.setOnCompletionListener ( new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                vv.start();
+            }
+        });
+
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/"
+                + R.raw.spinning_logo);
+
+        vv.setVideoURI(uri);
+        vv.start();
+        vv.requestFocus();
+        vv.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
         thread = new Thread(new Runnable() {
             @Override
             public void run() {

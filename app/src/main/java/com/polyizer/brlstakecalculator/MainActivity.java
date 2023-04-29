@@ -11,6 +11,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
+import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -33,9 +35,12 @@ import java.text.DecimalFormat;
 import java.util.Locale;
 
 import io.api.etherscan.core.impl.EtherScanApi;
+import io.api.etherscan.model.Balance;
+
 import java.math.BigInteger;
 import android.view.MenuItem;
 import android.widget.Toast;
+import android.widget.VideoView;
 
 import com.google.android.material.navigation.NavigationView;
 
@@ -62,6 +67,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public ActionBarDrawerToggle actionBarDrawerToggle;
     TextView realBRLTotalSupply;
     TextView BRLTotalSupplyOutput;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -97,16 +103,46 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         BRLTotalSupplyOutput = (TextView) findViewById(R.id.BRLTotalSupplyOutput);
         realBRLTotalSupply = (TextView) findViewById(R.id.realBRLTotalSupply);
 
+        VideoView vv = findViewById(R.id.video_view);
+
+        vv.setOnCompletionListener ( new MediaPlayer.OnCompletionListener() {
+
+            @Override
+            public void onCompletion(MediaPlayer mediaPlayer) {
+                vv.start();
+            }
+        });
+
+        Uri uri = Uri.parse("android.resource://" + getPackageName() + "/"
+                + R.raw.spinning_logo);
+
+        vv.setVideoURI(uri);
+        vv.start();
+        vv.requestFocus();
+        vv.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
+            @Override
+            public void onPrepared(MediaPlayer mp) {
+                mp.setLooping(true);
+            }
+        });
         thread = new Thread(new Runnable() {
             @Override
             public void run() {
                 try {
                     EtherScanApi api = new EtherScanApi();
+                    /*
                     BigInteger brlSupply = api.stats().supply("0x6291d951c5d68f47eD346042E2f86A94c253Bec4");
                     BigDecimal a = new BigDecimal(brlSupply);
                     BigDecimal b = new BigDecimal("0.000000000000000001");
                     BigDecimal c = a.multiply(b);
                     d = c.doubleValue();
+                     */
+                    Balance balance = api.account().balance("0x0e94f95913A66BBD4A32aF5f65f32F19e2859cE4", "0x6291d951c5d68f47eD346042E2f86A94c253Bec4");
+                    BigDecimal a = new BigDecimal(balance.getGwei());
+                    BigDecimal b = new BigDecimal("0.000000001");
+                    BigDecimal c = a.multiply(b);
+                    d = c.doubleValue();
+
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
