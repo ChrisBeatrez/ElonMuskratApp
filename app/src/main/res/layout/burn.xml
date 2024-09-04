@@ -20,18 +20,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/refresh2"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@android:color/transparent"
-                android:foreground="@android:drawable/ic_popup_sync"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.337" />
-
             <ImageView
                 android:id="@+id/Background"
                 android:layout_width="wrap_content"
@@ -44,78 +32,92 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/background" />
 
-            <VideoView
-                android:id="@+id/video_view"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
+            <Button
+                android:id="@+id/refresh2"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:background="@android:color/transparent"
+                android:foreground="@android:drawable/ic_popup_sync"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.041" />
+                app:layout_constraintVertical_bias="0.33" />
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="283dp"
+                android:layout_height="202dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.03"
+                app:srcCompat="@drawable/logo" />
 
             <EditText
                 android:id="@+id/Volume"
-                android:layout_width="250dp"
+                android:layout_width="280dp"
                 android:layout_height="100dp"
                 android:background="@drawable/customedit"
                 android:ems="10"
+                android:enabled="false"
                 android:foregroundTintMode="screen"
                 android:gravity="center"
                 android:inputType="none"
-                android:enabled="false"
                 android:singleLine="false"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.42"
                 tools:ignore="DuplicateIds" />
+
             <EditText
                 android:id="@+id/Volume"
-                android:layout_width="250dp"
+                android:layout_width="280dp"
                 android:layout_height="100dp"
                 android:background="@drawable/customedit"
                 android:ems="10"
+                android:enabled="false"
                 android:foregroundTintMode="screen"
                 android:gravity="center"
                 android:inputType="none"
-                android:enabled="false"
                 android:singleLine="false"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.585"
+                app:layout_constraintVertical_bias="0.615"
                 tools:ignore="DuplicateIds" />
+
             <EditText
                 android:id="@+id/Volume"
-                android:layout_width="250dp"
+                android:layout_width="280dp"
                 android:layout_height="100dp"
                 android:background="@drawable/customedit"
                 android:ems="10"
+                android:enabled="false"
                 android:foregroundTintMode="screen"
                 android:gravity="center"
                 android:inputType="none"
-                android:enabled="false"
                 android:singleLine="false"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.497"
+                app:layout_constraintHorizontal_bias="0.496"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.75"
+                app:layout_constraintVertical_bias="0.805"
                 tools:ignore="DuplicateIds" />
 
             <TextView
-                android:id="@+id/realBRLTotalSupply"
-                android:layout_width="178dp"
-                android:layout_height="31dp"
+                android:id="@+id/realMUSKTotalSupply"
+                android:layout_width="206dp"
+                android:layout_height="27dp"
                 android:ems="10"
                 android:inputType="textPersonName"
-                android:text="BRL Total Supply:"
+                android:text="MUSK Total Supply:"
                 android:textAlignment="center"
                 android:textColor="#FFFFFF"
                 android:textSize="20sp"
@@ -142,7 +144,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.535" />
+                app:layout_constraintVertical_bias="0.554" />
 
             <TextView
                 android:id="@+id/burnpercent"
@@ -159,10 +161,10 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.68" />
+                app:layout_constraintVertical_bias="0.725" />
 
             <TextView
-                android:id="@+id/BRLTotalSupplyOutput"
+                android:id="@+id/MUSKTotalSupplyOutput"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAlignment="center"
@@ -187,7 +189,7 @@
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.59" />
+                app:layout_constraintVertical_bias="0.616" />
 
             <TextView
                 android:id="@+id/burntpercentoutput"
@@ -201,7 +203,7 @@
                 app:layout_constraintHorizontal_bias="0.498"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.73" />
+                app:layout_constraintVertical_bias="0.785" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -215,6 +217,7 @@
         android:layout_height="match_parent"
         android:background="@color/black"
         android:layout_gravity="start"
+        app:itemTextColor="@color/white"
         app:menu="@menu/navigation_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>

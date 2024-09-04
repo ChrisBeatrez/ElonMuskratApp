@@ -1,16 +1,16 @@
 <resources>
-    <string name="app_name">BRL Stake Calculator</string>
+    <string name="app_name">Elon Muskrat</string>
     <!-- to toggle the open close button of the navigation drawer -->
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
     <string
-        name="Telegram"><a href="https://t.me/BullRunLife">Telegram</a></string>
+        name="Telegram"><a href="https://t.me/ElonMuskratBleevers">Telegram</a></string>
     <string
-        name="Website"><a href="https://bullrun.life/">Website</a></string>
+        name="Website"><a href="https://elonmuskrattoken.com/">Website</a></string>
     <string
-        name="Youtube"><a href="https://www.youtube.com/@SteveBullRun">Youtube</a></string>
+        name="Twitter"><a href="https://twitter.com/Muskrat_Token">Twitter</a></string>
     <string
-        name="Twitter"><a href="https://twitter.com/BullRunLife">Twitter</a></string>
+        name="Dextools"> <a href="https://www.dextools.io/app/en/ether/pair-explorer/0xb1cd770bba3c847cdaa3e51a61364f36ee0c6d79">Dextools</a></string>
     <string
-        name="Dextools"><a href="https://www.dextools.io/app/en/ether/pair-explorer/0xf0e66ec47608b99c6378e28fe395590d989b283e">Dextools</a></string>
+        name="BleevesCrypto">Welcome to Elon Muskrat! ELON MUSKRAT! This token was made as a passion project that was launched by <a href="https://twitter.com/BleevesCrypto">BleevesCrypto</a></string>
 </resources>

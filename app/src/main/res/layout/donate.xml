@@ -20,19 +20,6 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <Button
-                android:id="@+id/refresh5"
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:background="@android:color/transparent"
-                android:foreground="@android:drawable/ic_popup_sync"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.108"
-                app:layout_constraintStart_toEndOf="@+id/BRLTotalSupplyOutput"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.97" />
-
             <ImageView
                 android:id="@+id/Background"
                 android:layout_width="wrap_content"
@@ -45,15 +32,16 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/background" />
 
-            <VideoView
-                android:id="@+id/video_view"
-                android:layout_width="250dp"
-                android:layout_height="250dp"
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="233dp"
+                android:layout_height="216dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.041" />
+                app:layout_constraintVertical_bias="0.038"
+                app:srcCompat="@drawable/logo" />
 
             <TextView
                 android:id="@+id/EthereumAddress"
@@ -68,25 +56,9 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.404" />
 
-            <TextView
-                android:id="@+id/realBRLTotalSupply"
-                android:layout_width="133dp"
-                android:layout_height="31dp"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:text="BRL Total Supply:"
-                android:textAlignment="center"
-                android:textColor="#FEFEFE"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.057"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.977" />
-
 
             <TextView
-                android:id="@+id/EthAddress"
+                android:id="@+id/burnemoji"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="Eth Address"
@@ -99,18 +71,6 @@
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintVertical_bias="0.351" />
 
-            <TextView
-                android:id="@+id/BRLTotalSupplyOutput"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#FFFFFF"
-                android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.022"
-                app:layout_constraintStart_toEndOf="@+id/realBRLTotalSupply"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.966" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
 
@@ -124,6 +84,7 @@
         android:layout_height="match_parent"
         android:background="@color/black"
         android:layout_gravity="start"
+        app:itemTextColor="@color/white"
         app:menu="@menu/navigation_menu" />
 
 </androidx.drawerlayout.widget.DrawerLayout>
